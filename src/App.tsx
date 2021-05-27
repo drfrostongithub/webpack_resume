@@ -1,13 +1,13 @@
 import React from "react";
 
-const user = {
-  name: "Hayes",
-  id: "Dota",
-};
-interface User {
-  name: string;
-  id: number;
-}
+// const user = {
+//   name: "Hayes",
+//   id: "Dota",
+// };
+// interface User {
+//   name: string;
+//   id: number;
+// }
 
 function App() {
   return (

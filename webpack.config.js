@@ -1,6 +1,5 @@
 const path = require('path')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
-const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 
 module.exports = {
     // Where files should be sent once they are bundled
@@ -25,7 +24,7 @@ module.exports = {
             },
             {
                 test: /\.(css|s[ac]ss)$/i,
-                use: [MiniCssExtractPlugin.loader, 'style-loader', 'css-loader', 'sass-loader']
+                use: ['style-loader', 'css-loader', 'sass-loader']
             },
             {
                 test: /\.tsx?$/,
@@ -36,10 +35,8 @@ module.exports = {
     },
     plugins: [new HtmlWebpackPlugin({
         template: './src/index.html'
-    })
-        , new MiniCssExtractPlugin()
-    ],
+    })],
     resolve: {
-        extensions: ['.tsx', '.ts', '.js'],
+        extensions: ['.tsx', '.ts', '.js', '.jsx'],
     }
 }
