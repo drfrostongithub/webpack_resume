@@ -1,0 +1,91 @@
+/* Typography */
+
+@media (min-width: 576px) {
+  main {
+    font-size: 14px;
+  }
+}
+
+@media (min-width: 768px) {
+  main {
+    font-size: 16px;
+  }
+}
+
+@media (min-width: 992px) {
+  main {
+    font-size: 18px;
+  }
+}
+
+@media (min-width: 1200px) {
+  main {
+    font-size: 20px;
+  }
+}
+
+.icons-social i {
+  font-size: 3em;
+}
+
+.unselectable {
+  -webkit-user-select: none;
+  -webkit-touch-callout: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* Custom Styles */
+
+main {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  justify-content: center;
+  padding: 0 30px;
+  text-align: center;
+
+  // for navbar left side
+  margin-left: 5rem;
+  padding: 1rem;
+}
+
+main > .intro {
+  font-family: "Reem Kufi", sans-serif;
+  font-size: 3.75em;
+  font-weight: 600;
+}
+
+main > .tagline {
+  font-size: 1.5rem;
+  margin: 1.5rem 0;
+  font-weight: 100;
+}
+
+.icons-social i {
+  padding: 10px;
+}
+
+.devto {
+  margin-bottom: -0.2rem;
+}
+
+.devto svg {
+  margin-bottom: -0.2rem;
+  margin-left: 0.675rem;
+  width: 2.65rem;
+  height: 2.65rem;
+}
+
+body::-webkit-scrollbar {
+  width: 0.25rem;
+}
+
+body::-webkit-scrollbar-track {
+  background: #1e1e24;
+}
+
+body::-webkit-scrollbar-thumb {
+  background: #6649b8;
+}
