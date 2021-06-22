@@ -7,6 +7,8 @@ import { connect } from "react-redux";
 
 function App(props) {
 
+  // const page = useSelector(page) 
+
   let pageView = null;
   switch (props.page) {
     case "main":
@@ -34,8 +36,8 @@ function App(props) {
   );
 }
 
-
-const mapStateToProps = state => {
+// Redux stuff
+function mapStateToProps (state)  {
   return {
     page: state.page
   };

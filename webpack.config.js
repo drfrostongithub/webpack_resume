@@ -5,7 +5,7 @@ module.exports = {
     // Where files should be sent once they are bundled
     output: {
         path: path.join(__dirname, '/dist'),
-        filename: 'bundle.js'
+        filename: 'index.js'
     },
     // webpack 5 comes with devserver whic loads in dev mode
     devServer: {
