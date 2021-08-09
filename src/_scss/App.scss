@@ -2,6 +2,7 @@
 
 html {
   box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 
 *, *:before, *:after {
@@ -27,7 +28,9 @@ ol, ul {
   --bg-secondary: #141418;
   --transition-speed: 600ms;
 }
-@import './style.scss';
-@import './theme.scss';
-@import './navbar.scss';
-@import './about.scss';
+@import './Style.scss';
+@import './Theme.scss';
+@import './Navbar.scss';
+@import './About.scss';
+@import './Portofolio.scss';
+@import './Loader.scss'

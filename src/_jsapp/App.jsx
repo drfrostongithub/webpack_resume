@@ -1,8 +1,9 @@
 import React from "react";
-import Navbar from "./navbar";
-import Main from "./main";
+import Navbar from "./Navbar";
+import Main from "./Main";
 import About from "./About";
 import Portfolio from "./Portfolio";
+import Loader from './Loader'
 import { connect } from "react-redux";
 
 function App(props) {
@@ -27,11 +28,11 @@ function App(props) {
       pageView = <Main />;
       break;
   }
-
+console.log(pageView)
   return (
     <React.Fragment>
       <Navbar />
-      {pageView}
+      {pageView ? (pageView) : (<Loader />)}
     </React.Fragment>
   );
 }

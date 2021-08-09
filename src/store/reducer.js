@@ -13,7 +13,7 @@ const reducer = (state = initialState, action) => {
             page: action.value,
             history: state.history.concat({page:action.value})
         }
-        break;
+        // break;
     }
     return newState
 }

@@ -1,0 +1,21 @@
+[debug] [2021-08-09T06:35:40.528Z] ----------------------------------------------------------------------
+[debug] [2021-08-09T06:35:40.533Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\Dr Frost\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js init
+[debug] [2021-08-09T06:35:40.533Z] CLI Version:   9.16.0
+[debug] [2021-08-09T06:35:40.533Z] Platform:      win32
+[debug] [2021-08-09T06:35:40.533Z] Node Version:  v12.18.2
+[debug] [2021-08-09T06:35:40.535Z] Time:          Mon Aug 09 2021 13:35:40 GMT+0700 (Western Indonesia Time)
+[debug] [2021-08-09T06:35:40.535Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2021-08-09T06:35:40.548Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2021-08-09T06:35:40.549Z] > authorizing via signed-in user (eternal.putra@gmail.com)
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  D:\Codings\Self-Project\self-improvement\webpack-resume
+
