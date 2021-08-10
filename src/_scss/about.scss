@@ -9,4 +9,392 @@
   // for navbar left side
   margin-left: 5rem;
   padding: 1rem;
+
+  // About section
+  .left {
+    width: 100%;
+    height: 100vh;
+    box-shadow: 5px 0 5px -5px $box-shadow;
+    background-image: url("/src/assets/Photo.png");
+    background-size: cover;
+    background-position: center;
+    filter: grayscale(90%);
+    transition: filter 0.5s;
+
+    &:hover {
+      filter: none;
+    }
+  }
+
+  .right {
+    padding: $xl-size;
+    flex-grow: 1;
+
+    .scrim {
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100vh;
+      background-color: lighten($black, 15%);
+      z-index: 1;
+      opacity: 0.3;
+    }
+
+    .head {
+      text-align: center;
+      margin: $xxl-size 0;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100vh;
+      z-index: 2;
+
+      h1 {
+        color: $brand-color;
+        text-shadow: 1px 1px $edward;
+      }
+
+      p {
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        margin: 0;
+        font-size: $md-size;
+        font-weight: bold;
+        color: darken($white, 5%);
+      }
+
+      .contact-info {
+        display: inline-flex;
+        flex-direction: column;
+        margin: $xxxl-size auto $xl-size auto;
+        font-size: $sm-size;
+        flex-wrap: wrap;
+        justify-content: center;
+        color: darken($white, 5%);
+        position: absolute;
+        bottom: $md-size;
+        right: $md-size;
+
+        a {
+          display: flex;
+          align-items: center;
+          margin-bottom: $xxs-size;
+          border-bottom: none;
+
+          &:last-child {
+            &:after {
+              content: '';
+              padding: 0;
+            }
+          }
+
+          &:hover {
+            color: $brand-color;
+          }
+        }
+      }
+    }
+
+    @media only screen and (min-width: $mobile) {
+      .head {
+        height: auto;
+
+        .contact-info {
+          position: static;
+          flex-direction: row;
+
+          a {
+            &:hover {
+              color: darken($brand-color, 10%);
+            }
+
+            &:after {
+              content: "|";
+              padding-right: $lg-size;
+              padding-left: $lg-size;
+            }
+          }
+        }
+      }
+    }
+
+    @media only screen and (min-width: $dektop) {
+      .scrim {
+        display: none;
+      }
+
+      .head {
+        position: static;
+        height: auto;
+
+        p {
+          color: inherit;
+        }
+
+        .contact-info {
+          color: inherit;
+          opacity: 0.7;
+          position: static;
+          flex-direction: row;
+
+          a {
+            &:hover {
+              color: darken($brand-color, 10%);
+            }
+
+            &:after {
+              content: "|";
+              padding-right: $lg-size;
+              padding-left: $lg-size;
+            }
+          }
+        }
+      }
+    }
+
+    .intro {
+      margin-bottom: $x4l-size;
+
+      p {
+        font-size: $lg-size;
+      }
+
+      p::first-letter {
+        font-size: $xxl-size;
+        font-family: $heading-font-family;
+        line-height: 1;
+      }
+    }
+
+    .section {
+      margin-bottom: $x4l-size;
+
+      h3, h4 {
+        margin-bottom: 0;
+      }
+
+      .top-row {
+        display: flex;
+        align-items: center;
+        margin-bottom: $md-size;
+
+        h3 {
+          margin-right: $x4s-size;
+        }
+
+        a {
+          border-bottom: none;
+        }
+
+        > * {
+          flex-grow: 1;
+        }
+      }
+
+      .experience, .education {
+        margin-bottom: $xxxl-size;
+      }
+
+      .experience {
+        .manager {
+          font-size: $sm-size;
+          color: $pewter;
+
+          span:first-child {
+            font-weight: bold;
+          }
+
+          span:last-child {
+            font-style: italic;
+          }
+        }
+      }
+
+      .duration {
+        text-align: right;
+        font-size: $sm-size;
+        color: $pewter;
+      }
+
+      .cards {
+        .card {
+          border: solid 1px $gray;
+          transition: box-shadow .1s ease-in-out;
+          background-color: $white;
+          margin-bottom: $lg-size;
+          display: flex;
+          padding: $lg-size;
+
+          .card-left {
+            margin-right: $md-size;
+
+            img {
+              border-radius: 50%;
+              border: solid 1px $gray;
+              width: $x5l-size;
+            }
+          }
+
+          .card-right {
+            flex-grow: 1;
+
+            .reputation {
+              display: flex;
+              align-items: center;
+              font-size: $sm-size;
+              color: $pewter;
+
+              > div:not(:last-child) {
+                margin-right: $md-size;
+              }
+            }
+          }
+
+          &:hover {
+            box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.15);
+          }
+        }
+      }
+
+      .languages {
+        .language {
+          display: flex;
+          align-items: center;
+          margin-bottom: $xs-size;
+
+          div:first-child {
+            width: 12rem;
+            font-size: $lg-size;
+          }
+
+          .fluency {
+            display: flex;
+
+            span {
+              width: $lg-size;
+              height: $lg-size;
+              margin-right: $md-size;
+              border: solid 2px $pewter;
+              border-radius: 50%;
+              cursor: pointer;
+              transition: all 0.250s;
+
+              &.selected {
+                background-color: $pewter;
+
+                &:hover {
+                  background-color: $brand-color;
+                }
+              }
+
+              &:hover {
+                border-color: $brand-color;
+              }
+            }
+          }
+        }
+      }
+
+      .interests {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        flex-wrap: wrap;
+
+        li {
+          padding: 5px 8px;
+          background-color: $white;
+          border: solid 1px $pewter;
+          margin-right: $md-size;
+          border-radius: 5px;
+          margin-bottom: $xs-size;
+          cursor: pointer;
+          transition: all 0.250s;
+
+          &:hover {
+            background-color: $dove-gray;
+            color: $white;
+          }
+        }
+      }
+    }
+
+    .chips {
+      display: flex;
+      flex-wrap: wrap;
+      font-size: $sm-size;
+
+      .chip {
+        cursor: pointer;
+        background: $dove-gray;
+        border-radius: 3px 0 0 3px;
+        color: $alabaster;
+        display: inline-block;
+        height: 1.625rem;
+        line-height: 1.625rem;
+        padding: 0 1rem 0 1.25rem;
+        position: relative;
+        margin: .625rem .5rem 0 0;
+        transition: all .25s;
+
+        &::before {
+          background: $alabaster;
+          border-radius: .625rem;
+          box-shadow: inset 0 1px rgba(0,0,0,.25);
+          content: '';
+          height: .375rem;
+          left: .5rem;
+          position: absolute;
+          width: .375rem;
+          top: .65rem;
+          transition: all .25s;
+        }
+
+        &::after {
+          background: $alabaster;
+          border-bottom: .8125rem solid transparent;
+          border-left: .625rem solid $dove-gray;
+          border-top: .8125rem solid transparent;
+          content: '';
+          position: absolute;
+          right: 0;
+          top: 0;
+          transition: all .25s;
+        }
+
+        &:hover {
+          background-color: $brand-color;
+          color: $dove-gray;
+
+          &::after {
+            border-left: .625rem solid $brand-color;
+          }
+        }
+      }
+    }
+
+    footer {
+      .social-links {
+        text-align: center;
+
+        a {
+          color: $dove-gray;
+          cursor: pointer;
+          border-bottom: none;
+
+          i {
+            font-size: $lg-size;
+          }
+
+          &:hover {
+            color: $brand-color;
+          }
+        }
+      }
+    }
+  }
 }

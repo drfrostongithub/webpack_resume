@@ -1,3 +1,42 @@
+$heading-font-family:         'Bebas Neue', cursive !default;
+$body-font-family:            'PT Sans', sans-serif !default;
+
+$mobile:                      700px !default;
+$dektop:                      1080px !default;
+$extra-large:                 1500px !default;
+
+// Colors
+// Primary
+$brand-color:                 #ffde08 !default;
+
+// Secondary
+$alabaster:                   #fafafa !default;
+$dove-gray:                   #636363 !default;
+$edward:                      #adb8b5 !default;
+$pewter:                      #909e9a !default;
+
+// Tertiary
+$white:                       #ffffff !default;
+$black:                       #000000 !default;
+$gray:                        #eeeeee !default;
+$box-shadow:                  #cccccc !default;
+
+// $photo:                       "assets/Photo.png" !default;
+
+$base-size:                   var(--base-size) !default;
+$x5l-size:                    var(--x5l-size) !default;
+$x4l-size:                    var(--x4l-size) !default;
+$xxxl-size:                   var(--xxxl-size) !default;
+$xxl-size:                    var(--xxl-size) !default;
+$xl-size:                     var(--xl-size) !default;
+$lg-size:                     var(--lg-size) !default;
+$md-size:                     var(--md-size) !default;
+$sm-size:                     var(--sm-size) !default;
+$xs-size:                     var(--xs-size) !default;
+$xxs-size:                    var(--xxs-size) !default;
+$xxxs-size:                   var(--xxxs-size) !default;
+$x4s-size:                    var(--x4s-size) !default;
+
 /* Minimal CSS Reset */
 
 html {
